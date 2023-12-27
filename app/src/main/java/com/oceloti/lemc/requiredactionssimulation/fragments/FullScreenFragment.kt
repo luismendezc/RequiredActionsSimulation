@@ -45,7 +45,7 @@ class FullScreenFragment: Fragment() {
           isUrlSearchedFound = true
           listener?.onFragmentClosedAndUrlDetected(url)
           activity?.supportFragmentManager?.beginTransaction()?.remove(this@FullScreenFragment)?.commit()
-          //activity?.supportFragmentManager?.popBackStack()
+          activity?.supportFragmentManager?.popBackStack()
           return true
         }
          // Logic
