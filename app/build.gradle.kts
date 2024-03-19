@@ -16,11 +16,20 @@ android {
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
+  signingConfigs {
+    create("release") {
+      storeFile = file(System.getenv("RELEASE_STORE_FILE"))
+      storePassword = System.getenv("RELEASE_STORE_PASSWORD")
+      keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+      keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+    }
+  }
 
   buildTypes {
-    release {
+    getByName("release") {
       isMinifyEnabled = false
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+      signingConfig = signingConfigs.getByName("release")
     }
   }
   compileOptions {
