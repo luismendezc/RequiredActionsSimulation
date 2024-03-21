@@ -1,2 +1,2 @@
-json_key_file("./secure/test-project-luis-268517.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+json_key_file("~/keys/test-project-luis-268517.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
 package_name("com.oceloti.lemc.requiredactionssimulation") # e.g. com.krausefx.app

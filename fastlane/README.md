@@ -31,6 +31,14 @@ Android build and release to beta
 
 
 
+### android release_to_appcenter
+
+```sh
+[bundle exec] fastlane android release_to_appcenter
+```
+
+
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
