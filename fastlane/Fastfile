@@ -45,6 +45,6 @@ platform :android do
 
   lane :beta do    
 #    gradle(task: 'bundle', build_type: 'Release', project_dir:'./')
-    supply(track: 'beta',aab: './app/build/outputs/bundle/release/app-release.aab')
+    supply(track: 'internal',aab: './app/build/outputs/bundle/release/app-release.aab')
   end
 end
