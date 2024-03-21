@@ -47,4 +47,20 @@ platform :android do
 #    gradle(task: 'bundle', build_type: 'Release', project_dir:'./')
     supply(track: 'internal',aab: './app/build/outputs/bundle/release/app-release.aab')
   end
+
+  lane :release_to_appcenter do
+    appcenter_upload(
+      api_token: "bf1d52d0dad72826050f65b58a6574524d6fe7e5",
+      owner_name: "Luis Mendez Escobar",
+      app_name: "RequiredActionSimulation",
+      apk: "./app/build/outputs/apk/release/app-release.apk",      
+      destinations: "testers",
+      release_notes: "Release notes for this build",
+      notify_testers: true # set to true if you want to notify testers
+    )
+  end
+  
+
+
+
 end
