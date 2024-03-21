@@ -51,8 +51,8 @@ platform :android do
   lane :release_to_appcenter do
     appcenter_upload(
       api_token: "bf1d52d0dad72826050f65b58a6574524d6fe7e5",
-      owner_name: "Luis Mendez Escobar",
-      app_name: "RequiredActionSimulation",
+      owner_name: "luismendeze",
+      app_name: "required-action-simulation",
       apk: "./app/build/outputs/apk/release/app-release.apk",      
       destinations: "testers",
       release_notes: "Release notes for this build",
