@@ -54,7 +54,7 @@ platform :android do
       owner_name: "luismendeze",
       app_name: "required-action-simulation",
       apk: "./app/build/outputs/apk/release/app-release.apk",      
-      destinations: "testers",
+      destinations: "beta-testers-required-actions-app",
       release_notes: "Release notes for this build",
       notify_testers: true # set to true if you want to notify testers
     )
