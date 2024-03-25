@@ -43,10 +43,17 @@ platform :android do
     increment_version_code(gradle_file_path:'./app/build.gradle.kts')
   end
 
-  lane :beta do    
+  lane :internal do    
 #    gradle(task: 'bundle', build_type: 'Release', project_dir:'./')
     supply(track: 'internal',aab: './app/build/outputs/bundle/release/app-release.aab')
   end
+
+  lane :closed_testing do    
+    #    gradle(task: 'bundle', build_type: 'Release', project_dir:'./')
+        supply(track: 'closed',aab: './app/build/outputs/bundle/release/app-release.aab')
+  end
+    
+
 
   lane :release_to_appcenter do
     appcenter_upload(
